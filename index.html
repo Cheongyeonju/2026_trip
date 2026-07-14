@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>파란지붕 그 가족들의 여름휴가</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="phone">
+
+  <svg class="icons-defs" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="icon-food" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6.5" y1="3" x2="6.5" y2="21"/>
+      <line x1="4.5" y1="3" x2="4.5" y2="8"/>
+      <line x1="8.5" y1="3" x2="8.5" y2="8"/>
+      <path d="M4.5 8 Q6.5 10 8.5 8"/>
+      <ellipse cx="17" cy="5.5" rx="2.6" ry="3.3"/>
+      <line x1="17" y1="8.8" x2="17" y2="21"/>
+    </symbol>
+    <symbol id="icon-cafe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/>
+      <path d="M17 9.5h1.5a2 2 0 0 1 0 4H17"/>
+      <line x1="8" y1="3" x2="8" y2="5.2"/>
+      <line x1="12.3" y1="3" x2="12.3" y2="5.2"/>
+    </symbol>
+    <symbol id="icon-sight" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6.5" y1="3" x2="6.5" y2="21"/>
+      <path d="M6.5 4.5 L18.5 8.5 L6.5 12.5 Z" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-lodge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 11 L12 4 L20 11"/>
+      <path d="M6.5 10.5 V20 H17.5 V10.5"/>
+      <line x1="10.5" y1="20" x2="10.5" y2="15"/>
+      <line x1="13.5" y1="20" x2="13.5" y2="15"/>
+    </symbol>
+    <symbol id="icon-rest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="10.5" width="18" height="6" rx="2.5"/>
+      <path d="M5 10.5 L7 6.5 H17 L19 10.5"/>
+      <circle cx="7.5" cy="17.3" r="1.4"/>
+      <circle cx="16.5" cy="17.3" r="1.4"/>
+    </symbol>
+    <symbol id="icon-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </symbol>
+  </svg>
+
+  <!-- ================= 커버 화면 ================= -->
+  <section id="screen-cover" class="screen active">
+    <img class="cover-illust" src="images\background.png" alt="여행 일러스트">
+    <img src="images/carrier.png" class="sticker sticker-carrier" alt="">
+    <h1 class="cover-title">파란지붕<br>그 가족들의 여름휴가</h1>
+    <div class="pw-box">
+      <input id="pw-input" class="pw-input" type="tel" inputmode="numeric" maxlength="4" placeholder="••••" autocomplete="off">
+      <div class="pw-error" id="pw-error"></div>
+      <button class="enter-btn" id="enter-btn">입장하기</button>
+      <div class="pw-hint">가족에게 전달받은 4자리 비밀번호를 입력하세요</div>
+    </div>
+  </section>
+
+  <!-- ================= 홈 화면 ================= -->
+  <section id="screen-home" class="screen">
+    <div class="home-top">
+      <div class="eyebrow">FAMILY SUMMER TRIP</div>
+      <h2>파란지붕 그 가족들의 여름휴가</h2>
+      <img class="home-illust" src="images\background.png" alt="여행 일러스트">
+    </div>
+  
+
+    <div class="home-card a" id="go-itinerary">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#3E6E8E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6l6-2 6 2 6-2v14l-6 2-6-2-6 2z"/><line x1="9" y1="4" x2="9" y2="18"/><line x1="15" y1="6" x2="15" y2="20"/></svg></div>
+      <div class="txt">
+        <h3>일정보기</h3>
+        <p>루트와 방문순서 한눈에 보기</p>
+      </div>
+    </div>
+
+    <div class="home-card b" id="go-navi">
+      <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="#E8784F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg></div>
+      <div class="txt">
+        <h3>네비주소모음.zip</h3>
+        <p>운전할 때 주소 복붙하기</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 일정보기 화면 ================= -->
+  <section id="screen-itinerary" class="screen">
+    <div class="topbar">
+      <div class="back-btn" data-back="home"><svg><use href="#icon-back"/></svg></div>
+      <h1>일정보기</h1>
+    </div>
+    <div class="day-tabs" id="itin-tabs"></div>
+    <div class="legend">
+      <span><svg><use href="#icon-food"/></svg>식사</span>
+      <span><svg><use href="#icon-cafe"/></svg>카페</span>
+      <span><svg><use href="#icon-sight"/></svg>관광</span>
+      <span><svg><use href="#icon-lodge"/></svg>숙소</span>
+      <span><svg><use href="#icon-rest"/></svg>휴게소</span>
+    </div>
+    <div class="map-wrap" id="map-wrap"></div>
+    <div class="sheet" id="sheet">
+      <div class="sheet-handle" id="sheet-handle"></div>
+      <div class="sheet-title" id="sheet-title">위로 올려서 오늘 일정 보기</div>
+      <div class="sheet-list" id="sheet-list"></div>
+    </div>
+  </section>
+
+  <!-- ================= 네비주소모음.zip 화면 ================= -->
+  <section id="screen-navi" class="screen">
+    <div class="topbar">
+      <div class="back-btn" data-back="home"><svg><use href="#icon-back"/></svg></div>
+      <h1>네비주소모음.zip</h1>
+    </div>
+    <div class="day-tabs" id="navi-tabs"></div>
+    <div class="navi-note" id="navi-note"></div>
+    <div class="navi-body">
+      <div class="navi-list" id="navi-list"></div>
+    </div>
+  </section>
+
+  <div id="toast">복사되었어요!</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
