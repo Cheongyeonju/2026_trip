@@ -11,13 +11,7 @@
     --good:#4C8C6B;
   }
   *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
-
-  html, body{
-    margin:0;
-    padding:0;
-    width:100%;          /* 추가 */
-  }
-
+  html,body{margin:0;padding:0;}
   body{
     background:#e7e0d2;
     font-family:'Noto Sans KR', sans-serif;
@@ -31,14 +25,13 @@
     max-width:430px;
     min-height:100vh;
     background-color:var(--paper);
-    background-image:url("images\paper.jpg");
+    background-image:url("images/background.png");
     background-size:cover;
     background-position:center top;
     background-repeat:no-repeat;
     position:relative;
     overflow:hidden;
     box-shadow:0 0 40px rgba(0,0,0,0.15);
-    margin:0 auto;
   }
   .screen{
     position:absolute;
@@ -84,7 +77,7 @@
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:100px 30px;
+    padding:40px 30px;
     background:radial-gradient(circle at 50% 15%, rgba(255,255,255,.55), transparent 62%);
     position:relative;
   }
@@ -141,7 +134,7 @@
   /* ---------- 홈 ---------- */
   #screen-home{
     justify-content:center;
-    padding:100px 24px;
+    padding:30px 24px;
     gap:18px;
     position:relative;
   }
@@ -177,41 +170,12 @@
   .legend span{ display:inline-flex; align-items:center; gap:5px; font-size:12px; color:var(--muted); }
   .legend svg{ width:14px;height:14px; }
 
-  .map-wrap{
-    flex:1; position:relative; margin:0 14px; border-radius:20px; overflow:hidden;
-    background:#EAF1EC; border:2px solid var(--line); min-height:220px;
-  }
-  .map-wrap svg{ width:100%; height:100%; display:block; }
-  #kakao-map{ width:100%; height:100%; }
-  .kko-pin{
-    position:relative; width:34px;height:34px; border-radius:50%;
-    background:var(--roof); border:2.5px solid #FFFDF7; cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    box-shadow:0 2px 5px rgba(0,0,0,0.25); transition:all .15s ease;
-  }
-  .kko-pin.dim{ opacity:.55; }
-  .kko-pin svg{ width:17px;height:17px; stroke:#FFFDF7; }
-  .kko-pin .num{
-    position:absolute; top:-9px; right:-9px; background:#2A4F66; color:#fff;
-    font-size:10px; font-weight:900; border-radius:50%; width:17px;height:17px;
-    display:flex;align-items:center;justify-content:center;
-  }
-  .kko-pin.selected{ background:var(--accent); transform:scale(1.18); z-index:10; }
-
-  .sheet{
-    flex-shrink:0; background:var(--card); border-top-left-radius:26px; border-top-right-radius:26px;
-    box-shadow:0 -6px 18px rgba(0,0,0,0.08); margin-top:10px; transition:max-height .35s ease;
-    max-height:74px; overflow:hidden; position:relative;
-  }
-  .sheet.expanded{ max-height:64vh; overflow-y:auto; }
-  .sheet-handle{ width:44px;height:5px; background:var(--line); border-radius:3px; margin:12px auto 6px; cursor:pointer; }
-  .sheet-title{ text-align:center; font-size:14px; color:var(--muted); padding-bottom:8px; cursor:pointer; }
-  .sheet-list{ padding:4px 18px 24px; }
+  .itin-body{ flex:1; overflow-y:auto; }
+  .itin-list{ padding:4px 18px 24px; }
   .stop-row{
     display:flex; align-items:center; gap:12px; padding:12px 10px; margin:0 -10px;
-    border-bottom:1px dashed var(--line); border-radius:12px; cursor:pointer; transition:background .2s ease;
+    border-bottom:1px dashed var(--line); border-radius:12px;
   }
-  .stop-row.active{ background:#FBEFE3; border-bottom-color:transparent; }
   .stop-row:last-child{ border-bottom:none; }
   .stop-num{
     width:30px;height:30px; border-radius:50%; background:var(--roof); color:#fff;
@@ -237,6 +201,7 @@
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
   }
   .navi-card .caticon{ width:20px;height:20px; flex-shrink:0; color:var(--roof-dark);}
+  .navi-card .caticon svg{ width:100%; height:100%; display:block; }
   .navi-card h4{ margin:0; font-size:17px; font-weight:900; flex:1; }
   .navi-card .addr{ font-size:15px; color:var(--ink); line-height:1.55; margin:0 0 12px; word-break:keep-all; }
   .copy-btn{
@@ -246,11 +211,6 @@
   .copy-btn.copied{ background:var(--good); }
   .copy-btn svg{ width:16px;height:16px; }
   .navi-note{ font-size:13px; color:var(--muted); padding:2px 18px 0; flex-shrink:0; }
-  .navi-card .caticon svg{
-    width:100%;
-    height:100%;
-    display:block;
-  }
 
   #toast{
     position:absolute; left:50%; bottom:26px; transform:translate(-50%, 20px);
